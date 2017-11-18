@@ -13,7 +13,9 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var FixedExpenseInput: UITextField!
     
     @IBAction func SubmitButton(_ sender: Any) {
+        self.view.endEditing(true)
         UserDefaults.standard.set(FixedExpenseInput.text,forKey: "fixedExpenseInput")
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
