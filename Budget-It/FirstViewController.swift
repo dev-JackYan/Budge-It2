@@ -8,14 +8,33 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    @IBOutlet weak var FixedBudgetInput: UITextField!
     
-    @IBOutlet weak var FixedExpenseInput: UITextField!
-    
-    @IBAction func SubmitButton(_ sender: Any) {
+        //
+//    @IBAction func SubmitButton(_ sender: Any) {
+//        self.view.endEditing(true)
+//        if(isKeyPresentInUserDefaults(key: "fixedExpenseInput")){
+//            UserDefaults.standard.removeObject(forKey: "fixedExpenseInput")
+//         UserDefaults.standard.set(FixedExpenseInput.text,forKey: "fixedExpenseInput")
+//        }
+//        else{
+//             UserDefaults.standard.set(FixedExpenseInput.text,forKey: "fixedExpenseInput")
+//        }
+//        
+//    }
+    @IBAction func NextButton(_ sender: Any) {
         self.view.endEditing(true)
-        UserDefaults.standard.set(FixedExpenseInput.text,forKey: "fixedExpenseInput")
+        if(isKeyPresentInUserDefaults(key: "fixedExpenseInput")){
+            UserDefaults.standard.removeObject(forKey: "fixedExpenseInput")
+            UserDefaults.standard.set(FixedBudgetInput.text,forKey: "fixedExpenseInput")
+        }
+        else{
+            UserDefaults.standard.set(FixedBudgetInput.text,forKey: "fixedExpenseInput")
+        }
+        
         
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
@@ -37,7 +56,9 @@ class FirstViewController: UIViewController {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
-    
+    func isKeyPresentInUserDefaults(key: String) -> Bool {
+        return UserDefaults.standard.object(forKey: key) != nil
+    }
     
 }
 /*
