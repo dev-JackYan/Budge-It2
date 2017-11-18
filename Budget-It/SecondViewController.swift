@@ -10,7 +10,14 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var AllocationsBudgetText: UITextField!
+
+    @IBOutlet weak var FixedExpensesBudgetText: UITextField!
+    @IBOutlet weak var FoodBudgetText: UITextField!
     @IBOutlet weak var FoodBudget: UILabel!
+    
+    @IBOutlet weak var TransportationBudgetText: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

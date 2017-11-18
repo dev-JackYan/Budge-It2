@@ -10,12 +10,23 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+
     @IBOutlet weak var FixedExpenseInput: UITextField!
     
+    @IBOutlet weak var PersonalExpensesBudget: UITextField!
+    @IBOutlet weak var LoansBudget:
+    UITextField!
+    @IBOutlet weak var ShelterBudget: UITextField!
+    @IBOutlet weak var TransportationBudget: UITextField!
+    @IBOutlet weak var FoodBudget: UITextField!
     @IBAction func SubmitButton(_ sender: Any) {
         self.view.endEditing(true)
         UserDefaults.standard.set(FixedExpenseInput.text,forKey: "fixedExpenseInput")
-        
+        UserDefaults.standard.set(FoodBudget.text,forKey: "FoodBudget")
+        UserDefaults.standard.set(LoansBudget.text,forKey: "LoansBudget")
+        UserDefaults.standard.set(TransportationBudget.text,forKey: "TransportationBudget")
+        UserDefaults.standard.set(ShelterBudget.text,forKey: "ShelterBudget")
+        UserDefaults.standard.set(PersonalExpensesBudget.text,forKey: "PersonalExpensesBudget")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
