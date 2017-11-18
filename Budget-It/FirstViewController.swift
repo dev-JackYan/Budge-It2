@@ -8,29 +8,56 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-    @IBOutlet weak var FixedBudgetInput: UITextField!
     
-        //
-//    @IBAction func SubmitButton(_ sender: Any) {
-//        self.view.endEditing(true)
-//        if(isKeyPresentInUserDefaults(key: "fixedExpenseInput")){
-//            UserDefaults.standard.removeObject(forKey: "fixedExpenseInput")
-//         UserDefaults.standard.set(FixedExpenseInput.text,forKey: "fixedExpenseInput")
-//        }
-//        else{
-//             UserDefaults.standard.set(FixedExpenseInput.text,forKey: "fixedExpenseInput")
-//        }
-//        
-//    }
+ 
+    @IBOutlet weak var Text1: UITextField!
+
+    @IBOutlet weak var Text2: UITextField!
+
+    @IBOutlet weak var Text3: UITextField!
+    @IBOutlet weak var Text4: UITextField!
+    @IBOutlet weak var Text5: UITextField!
     @IBAction func NextButton(_ sender: Any) {
         self.view.endEditing(true)
-        if(isKeyPresentInUserDefaults(key: "fixedExpenseInput")){
-            UserDefaults.standard.removeObject(forKey: "fixedExpenseInput")
-            UserDefaults.standard.set(FixedBudgetInput.text,forKey: "fixedExpenseInput")
+        
+        if(isKeyPresentInUserDefaults(key: "Text1")){
+            UserDefaults.standard.removeObject(forKey: "Text1")
+            UserDefaults.standard.set(Text1.text,forKey: "Text1")
         }
         else{
-            UserDefaults.standard.set(FixedBudgetInput.text,forKey: "fixedExpenseInput")
+            UserDefaults.standard.set(Text1.text,forKey: "Text1")
         }
+        if(isKeyPresentInUserDefaults(key: "Text2")){
+            UserDefaults.standard.removeObject(forKey: "Tex2")
+            UserDefaults.standard.set(Text2.text,forKey: "Text2")
+        }
+        else{
+            UserDefaults.standard.set(Text2.text,forKey: "Text2")
+        }
+        
+        if(isKeyPresentInUserDefaults(key: "Text3")){
+            UserDefaults.standard.removeObject(forKey: "Text3")
+            UserDefaults.standard.set(Text3.text,forKey: "Text3")
+        }
+        else{
+            UserDefaults.standard.set(Text3.text,forKey: "Text3")
+        }
+        if(isKeyPresentInUserDefaults(key: "Text4")){
+            UserDefaults.standard.removeObject(forKey: "Text4")
+            UserDefaults.standard.set(Text4.text,forKey: "Text4")
+        }
+        else{
+            UserDefaults.standard.set(Text4.text,forKey: "Text4")
+        }
+        if(isKeyPresentInUserDefaults(key: "Text5")){
+            UserDefaults.standard.removeObject(forKey: "Text5")
+            UserDefaults.standard.set(Text5.text,forKey: "Text5")
+        }
+        else{
+            UserDefaults.standard.set(Text5.text,forKey: "Text5")
+        }
+        
+        
         
         
     }
