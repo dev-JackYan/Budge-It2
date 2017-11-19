@@ -70,24 +70,70 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         if CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) {
             
             // region data
-            let title = "Franks funhouse"
-            let coordinate = CLLocationCoordinate2DMake(37.703026, -121.759735)
-            let regionRadius = 100.0
+            var title = "Franky's Hall of Sports"
+            //need to specify type of expense
+            var coordinate = CLLocationCoordinate2DMake(37.703026, -121.759735)
+            var regionRadius = 40.0
             
             // setup region
-            let region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: coordinate.latitude,
+            var region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: coordinate.latitude,
                                                                          longitude: coordinate.longitude), radius: regionRadius, identifier: title)
             locationManager.startMonitoring(for: region)
             
             // setup annotation
-            let restaurantAnnotation = MKPointAnnotation()
+            var restaurantAnnotation = MKPointAnnotation()
             restaurantAnnotation.coordinate = coordinate;
             restaurantAnnotation.title = "\(title)";
             map.addAnnotation(restaurantAnnotation)
             
             // setup circle
-            let circle = MKCircle(center: coordinate, radius: regionRadius)
+            var circle = MKCircle(center: coordinate, radius: regionRadius)
             map.add(circle)
+            
+            
+            // region data
+            title = "Zaggy's Tech-Palace"
+            //need to specify type of expense
+            coordinate = CLLocationCoordinate2DMake(37.702233, -121.766270)
+            regionRadius = 40.0
+            
+            // setup region
+            region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: coordinate.latitude,
+                                                                     longitude: coordinate.longitude), radius: regionRadius, identifier: title)
+            locationManager.startMonitoring(for: region)
+            
+            // setup annotation
+            restaurantAnnotation = MKPointAnnotation()
+            restaurantAnnotation.coordinate = coordinate;
+            restaurantAnnotation.title = "\(title)";
+            map.addAnnotation(restaurantAnnotation)
+            
+            // setup circle
+            circle = MKCircle(center: coordinate, radius: regionRadius)
+            map.add(circle)
+            
+            
+            // region data
+            title = "Jack's Butchershop"
+            //need to specify type of expense
+            coordinate = CLLocationCoordinate2DMake(37.701051, -121.772218)
+            regionRadius = 40.0
+            
+            // setup region
+            region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: coordinate.latitude,
+                                                                     longitude: coordinate.longitude), radius: regionRadius, identifier: title)
+            locationManager.startMonitoring(for: region)
+            
+            // setup annotation
+            restaurantAnnotation = MKPointAnnotation()
+            restaurantAnnotation.coordinate = coordinate;
+            restaurantAnnotation.title = "\(title)";
+            map.addAnnotation(restaurantAnnotation)
+            
+            // setup circle
+            circle = MKCircle(center: coordinate, radius: regionRadius)
+            map.add(circle)
+            
         }
         else {
             print("System can't track regions")
@@ -101,8 +147,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        showAlert("enter \(region.identifier)")
-        //add entrance time
+        //showAlert("enter \(region.identifier)")
         if (entered == false) {
             entrytime = NSDate()
         }
@@ -110,10 +155,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        showAlert("exit \(region.identifier)")
+        //showAlert("exit \(region.identifier)")
         
-        //remove entrance time
-        //updateRegions()
         entered = false
         
     }
@@ -127,9 +170,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     //checks if user has been in proximity for x period of time
     func updateRegions() {
-        let regionMaxVisiting = 3.0
+        let regionMaxVisiting = 2.5
         if NSDate().timeIntervalSince(entrytime as Date) > regionMaxVisiting {
-            showAlert("You've been in this area for 3 seconds")
+            showAlert("Remember your budget for _____ is $_____")
             entered = false
         }
     }
