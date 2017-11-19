@@ -11,6 +11,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import UserNotifications
 
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
@@ -30,6 +31,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in  })
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Spendings Alert"
+        content.body = "Remember your budget for _____ is $_____"
+        content.badge = 1
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         
         // setup locationManager
         
@@ -50,6 +62,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        print ("YOYOYOYYOYOYOYOYOYO")
         super.viewDidAppear(animated)
         
         if CLLocationManager.authorizationStatus() == .notDetermined {
@@ -72,8 +85,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             // region data
             var title = "Franky's Hall of Sports"
             //need to specify type of expense
-            var coordinate = CLLocationCoordinate2DMake(37.703026, -121.759735)
-            var regionRadius = 40.0
+            var coordinate = CLLocationCoordinate2DMake(42.9988376, -81.2784611)
+            var regionRadius = 5.0
             
             // setup region
             var region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: coordinate.latitude,
@@ -94,7 +107,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             // region data
             title = "Zaggy's Tech-Palace"
             //need to specify type of expense
-            coordinate = CLLocationCoordinate2DMake(37.702233, -121.766270)
+            coordinate = CLLocationCoordinate2DMake(43.000690, -81.276636)
             regionRadius = 40.0
             
             // setup region
@@ -116,7 +129,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             // region data
             title = "Jack's Butchershop"
             //need to specify type of expense
-            coordinate = CLLocationCoordinate2DMake(37.701051, -121.772218)
+            coordinate = CLLocationCoordinate2DMake(43.001594, -81.277124)
             regionRadius = 40.0
             
             // setup region
@@ -175,6 +188,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             showAlert("Remember your budget for _____ is $_____")
             entered = false
         }
+        let content = UNMutableNotificationContent()
+        content.subtitle = "Spendings Alert"
+        content.body = "Remember your budget for _____ is $_____"
+        content.badge = 1
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -184,15 +207,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     //show alert
     func showAlert(_ title: String) {
-        let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: nil, preferredStyle: UIAlertControllerStyle.alert)
         
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
         }))
         self.present(alert, animated: true, completion: nil)
-        
     }
     
     
 }
+
 
