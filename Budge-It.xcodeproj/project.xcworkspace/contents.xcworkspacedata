@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Budget-It.xcodeproj">
+      location = "self:/Users/FrankMAC/Documents/Swift/Budge-It2/Budge-It.xcodeproj">
    </FileRef>
 </Workspace>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09E065EA1FC0DA2C00591580 /* connectBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E065E91FC0DA2C00591580 /* connectBank.swift */; };
 		A51E3A8C1FC097C000EB77A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E3A8B1FC097C000EB77A1 /* AppDelegate.swift */; };
 		A51E3A8E1FC097C000EB77A1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E3A8D1FC097C000EB77A1 /* FirstViewController.swift */; };
 		A51E3A901FC097C000EB77A1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E3A8F1FC097C000EB77A1 /* SecondViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09E065E91FC0DA2C00591580 /* connectBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connectBank.swift; sourceTree = "<group>"; };
 		A51E3A881FC097C000EB77A1 /* Budget-It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Budget-It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51E3A8B1FC097C000EB77A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A51E3A8D1FC097C000EB77A1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				A51E3A8B1FC097C000EB77A1 /* AppDelegate.swift */,
 				A51E3A8D1FC097C000EB77A1 /* FirstViewController.swift */,
 				A51E3A8F1FC097C000EB77A1 /* SecondViewController.swift */,
+				09E065E91FC0DA2C00591580 /* connectBank.swift */,
 				A51E3A911FC097C000EB77A1 /* Main.storyboard */,
 				A51E3A941FC097C000EB77A1 /* Assets.xcassets */,
 				A51E3A961FC097C000EB77A1 /* LaunchScreen.storyboard */,
@@ -211,7 +214,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A51E3A831FC097C000EB77A1 /* Build configuration list for PBXProject "Budget-It" */;
+			buildConfigurationList = A51E3A831FC097C000EB77A1 /* Build configuration list for PBXProject "Budge-It" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -265,6 +268,7 @@
 			files = (
 				A51E3A901FC097C000EB77A1 /* SecondViewController.swift in Sources */,
 				A51E3A8C1FC097C000EB77A1 /* AppDelegate.swift in Sources */,
+				09E065EA1FC0DA2C00591580 /* connectBank.swift in Sources */,
 				A51E3A8E1FC097C000EB77A1 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,7 +510,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A51E3A831FC097C000EB77A1 /* Build configuration list for PBXProject "Budget-It" */ = {
+		A51E3A831FC097C000EB77A1 /* Build configuration list for PBXProject "Budge-It" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A51E3AB01FC097C000EB77A1 /* Debug */,
