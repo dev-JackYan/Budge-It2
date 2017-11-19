@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09E065EA1FC0DA2C00591580 /* connectBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E065E91FC0DA2C00591580 /* connectBank.swift */; };
+		A518F2EE1FC10A15006E8CF9 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A518F2ED1FC10A15006E8CF9 /* ThirdViewController.swift */; };
 		A51E3A8C1FC097C000EB77A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E3A8B1FC097C000EB77A1 /* AppDelegate.swift */; };
 		A51E3A8E1FC097C000EB77A1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E3A8D1FC097C000EB77A1 /* FirstViewController.swift */; };
 		A51E3A901FC097C000EB77A1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E3A8F1FC097C000EB77A1 /* SecondViewController.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		09E065E91FC0DA2C00591580 /* connectBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connectBank.swift; sourceTree = "<group>"; };
+		A518F2ED1FC10A15006E8CF9 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		A51E3A881FC097C000EB77A1 /* Budget-It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Budget-It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51E3A8B1FC097C000EB77A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A51E3A8D1FC097C000EB77A1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				A51E3A8B1FC097C000EB77A1 /* AppDelegate.swift */,
 				A51E3A8D1FC097C000EB77A1 /* FirstViewController.swift */,
 				A51E3A8F1FC097C000EB77A1 /* SecondViewController.swift */,
+				A518F2ED1FC10A15006E8CF9 /* ThirdViewController.swift */,
 				09E065E91FC0DA2C00591580 /* connectBank.swift */,
 				A51E3A911FC097C000EB77A1 /* Main.storyboard */,
 				A51E3A941FC097C000EB77A1 /* Assets.xcassets */,
@@ -268,6 +271,7 @@
 			files = (
 				A51E3A901FC097C000EB77A1 /* SecondViewController.swift in Sources */,
 				A51E3A8C1FC097C000EB77A1 /* AppDelegate.swift in Sources */,
+				A518F2EE1FC10A15006E8CF9 /* ThirdViewController.swift in Sources */,
 				09E065EA1FC0DA2C00591580 /* connectBank.swift in Sources */,
 				A51E3A8E1FC097C000EB77A1 /* FirstViewController.swift in Sources */,
 			);
